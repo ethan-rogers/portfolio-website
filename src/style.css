@@ -1,16 +1,18 @@
 :root {
     --background-color: rgb(48, 48, 48);
+    --highlight-color: rgb(68, 68, 68);
     --text-color: rgb(221, 221, 221);
     --mid-color: rgb(131, 131, 131);
-    --default-side-marigin: 70px; 
+    --default-side-marigin: 100px; 
     --default-font-size: 24px;
+    --small-heading: 32px;
 }
 
 
 h1{
     margin-left: var(--default-side-marigin);
     margin-right: var(--default-side-marigin);
-    margin-top: 100px;
+    margin-top: 200px;
     font-size: 88px;
     color: var(--text-color);
 }
@@ -21,6 +23,7 @@ h3{
     color: var(--text-color);
     font-size: 48px;
     margin-top: 100px;
+    margin-bottom: 30px;
 }
 
 p{
@@ -38,14 +41,24 @@ hr{
 }
 
 .navbar{
-    position: sticky;
-    top: 30px; 
+    
+    position: fixed;
+    height: 60px; 
+    width: 100%;
+    top: 0px;
+    background-color: var(--background-color);
+    z-index: 10; 
 }
 
 .navbar ul{
-    padding: 0px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    padding-left: 0px;
+    padding-right: 0px;
+
+    margin-top: 0px;
+    margin-bottom: 0px;
     margin-left: var(--default-side-marigin);
     margin-right: var(--default-side-marigin);
     list-style-type: none;
@@ -94,4 +107,41 @@ hr{
 .iconlink:hover{
     color: white;
 
+}
+.projectbutton{
+    background: none; 
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer; 
+    -webkit-appearance: none; 
+    -moz-appearance: none;    
+    appearance: none; 
+
+    font: inherit;
+    margin-left: var(--default-side-marigin);
+    margin-right: var(--default-side-marigin);
+    margin-top: 30px;
+    margin-bottom: 0px;
+
+    padding: 0px;
+}
+
+.projectbutton:hover{
+    background-color: var(--highlight-color);
+}
+
+
+.projecttitle{
+    font-size: var(--small-heading);
+    text-align: left;
+    color: var(--text-color);
+    margin: 0px;
+    padding-bottom: 3px;
+}
+
+.projectsummary{
+    font-size: var(--default-font-size);
+    text-align: left;
+    color: var(--mid-color);
+    margin: 0px;
 }

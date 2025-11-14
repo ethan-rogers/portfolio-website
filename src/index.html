@@ -12,6 +12,7 @@
   <body style="background-color: var(--background-color);">
     
     <nav class="navbar">
+
         <ul>
             <li style="float:left; padding-right:35px"><button> About </button></li>
             <li style="float:left; padding-right:35px"><button> Projects </button></li>
@@ -23,7 +24,7 @@
             </a></li>
             
         </ul>
-        <hr>
+        <hr style="margin-top: 0;">
     </nav>
     
 
@@ -51,9 +52,18 @@
     </div>
 
     <h3>
-        Portfolio
+        My Projects        
     </h3>
 
-    <script src="index.js"></script>
+    <div id = projectList style="display: flex; flex-direction: column;">
+
+    </div>
+
+    <script type="module">
+        import { createProjectList } from "./scripts/projects.js";
+        createProjectList();
+    </script>
+
+
   </body>
 </html>
