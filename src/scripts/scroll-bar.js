@@ -1,5 +1,5 @@
 const projectStart  = 560;
-const experienceStart = 1230;
+const experienceStart = 1235;
 
 
 
@@ -58,7 +58,11 @@ function gotoOffset(goal){
         window.scrollTo(0, window.pageYOffset + direction*22);
         
         if ((window.pageYOffset >= goal && direction === 1) || (window.pageYOffset <= goal && direction === -1)) {
+            window.scrollTo(0, goal);
             clearInterval(intervalId); 
         }
     }, interval);
+
+    
+    
 }
